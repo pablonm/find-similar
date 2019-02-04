@@ -20,11 +20,22 @@ export class SearchBox extends PureComponent {
             this.props.onSearch(this.state.input)
     }
 
+    handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            this.search()
+        }
+    }
+
     render () {
         return (
             <Search>
                 <Shadow>
-                    <Input type="text" placeholder="Alien" onChange={e => this.setState({ input: e.target.value })} />
+                    <Input 
+                        type="text"
+                        placeholder="Alien"
+                        onChange={e => this.setState({ input: e.target.value })}
+                        onKeyPress={this.handleKeyPress} 
+                    />
                     <Button onClick={this.search}>
                         {this.props.isFetching ? (
                             <Spin indicator={<Icon type="loading" style={{ color: 'white' }} spin />} />

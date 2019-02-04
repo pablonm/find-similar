@@ -8,8 +8,7 @@ export const Result = styled.div`
     display: flex;
     margin-top: 20px;
     background: #6E6E6E;
-    height: 60px;
-    line-height: 2.7;
+    padding: 15px 0;
     font-size: 1.5em;
     color: #E6E6E6;
     -webkit-box-shadow: 3px 3px 0px 2px rgba(0,0,0,0.1);
