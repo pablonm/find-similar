@@ -18,4 +18,4 @@ You can input a movie/band/show/book/author/game and it shows similar content us
 
 # Live
 
-[find-similar.github.io](find-similar.github.io)
+[find-similar.github.io](https://find-similar.github.io)
