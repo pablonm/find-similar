@@ -14,7 +14,7 @@ This is a small project to test some React libraries:
 
 # What it does
 
-You can input a movie/band/show/book/author/game and it shows similar content using [TasteDice API](https://tastedive.com/read/api)
+You can input a movie/band/show/book/author/game and it shows similar content using [TasteDive API](https://tastedive.com/read/api)
 
 # Live
 
