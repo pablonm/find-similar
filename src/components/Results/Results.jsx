@@ -1,6 +1,6 @@
 import React, { memo, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { Result, NoResults, Error } from './ResultsStyle'
+import { Result, Error } from './ResultsStyle'
 
 const getEmoji = type => {
   switch (type) {
@@ -63,15 +63,29 @@ export const Results = props => {
               </Result>
             ))
           ) : (
-            <NoResults>
+            <Error>
               <span aria-label="sorry" role="img">
                 😱
               </span>
-              Sorry, no results.
-            </NoResults>
+              No results
+              <span aria-label="sorry" role="img">
+                😱
+              </span>
+            </Error>
           )}
         </div>
-        {error && <Error>{error}</Error>}
+
+        {error && (
+          <Error>
+            <span aria-label="sorry" role="img">
+              💀
+            </span>
+            {error}
+            <span aria-label="sorry" role="img">
+              💀
+            </span>
+          </Error>
+        )}
       </Fragment>
     )
   return null

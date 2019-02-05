@@ -22,10 +22,13 @@ export const Result = styled.div`
   }
 `
 
-export const NoResults = styled.div`
-  color: red;
-`
-
 export const Error = styled.div`
   color: red;
+  text-align: center;
+  font-size: 2em;
+  margin-top: 30px;
+
+  span {
+    margin: 0 10px;
+  }
 `
