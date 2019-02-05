@@ -1,13 +1,13 @@
-import React, { memo } from "react";
-import { connect } from "react-redux";
-import { Row, Col } from "antd";
-import { Body, Title } from "./FinderStyle";
-import * as actions from "../../store/actions/index";
-import { SearchBox } from "../../components/SearchBox/SearchBox";
-import { Results } from "../../components/Results/Results";
+import React, { memo } from 'react'
+import { connect } from 'react-redux'
+import { Row, Col } from 'antd'
+import { Body, Title } from './FinderStyle'
+import * as actions from '../../store/actions/index'
+import { SearchBox } from '../../components/SearchBox/SearchBox'
+import { Results } from '../../components/Results/Results'
 
 export const Finder = props => {
-  const { isFetching, findSimilar, results, error } = props;
+  const { isFetching, findSimilar, results, error } = props
   return (
     <Body>
       <Row>
@@ -27,24 +27,24 @@ export const Finder = props => {
         </Col>
       </Row>
     </Body>
-  );
-};
+  )
+}
 
 const mapStateToProps = state => {
   return {
     isFetching: state.finder.isFetching,
     results: state.finder.results,
-    error: state.finder.error
-  };
-};
+    error: state.finder.error,
+  }
+}
 
 const mapDispatchToProps = dispatch => {
   return {
-    findSimilar: to => dispatch(actions.findSimilar(to))
-  };
-};
+    findSimilar: to => dispatch(actions.findSimilar(to)),
+  }
+}
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(memo(Finder));
+)(memo(Finder))
