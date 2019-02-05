@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Result = styled.div`
   display: flex;
@@ -20,12 +20,12 @@ export const Result = styled.div`
     width: 60px;
     text-align: center;
   }
-`;
+`
 
 export const NoResults = styled.div`
   color: red;
-`;
+`
 
 export const Error = styled.div`
   color: red;
-`;
+`

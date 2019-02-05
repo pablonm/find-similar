@@ -1,10 +1,11 @@
 import React, { memo } from 'react'
 import { connect } from 'react-redux'
 import { Row, Col } from 'antd'
+import PropTypes from 'prop-types'
 import { Body, Title } from './FinderStyle'
 import * as actions from '../../store/actions/index'
-import { SearchBox } from '../../components/SearchBox/SearchBox'
-import { Results } from '../../components/Results/Results'
+import SearchBox from '../../components/SearchBox/SearchBox'
+import Results from '../../components/Results/Results'
 
 export const Finder = props => {
   const { isFetching, findSimilar, results, error } = props
@@ -28,6 +29,25 @@ export const Finder = props => {
       </Row>
     </Body>
   )
+}
+
+Finder.propTypes = {
+  isFetching: PropTypes.bool,
+  results: PropTypes.arrayOf(
+    PropTypes.shape({
+      Name: PropTypes.string.isRequired,
+      Type: PropTypes.string.isRequired,
+    })
+  ),
+  error: PropTypes.string,
+  findSimilar: PropTypes.func,
+}
+
+Finder.defaultProps = {
+  isFetching: false,
+  results: null,
+  error: null,
+  findSimilar: () => null,
 }
 
 const mapStateToProps = state => {

@@ -8,8 +8,8 @@
   ],
   "parser": "babel-eslint",
   "rules": {
-    "linebreak-style": 1,
-    "react/prop-types": false,
+    "import/no-named-as-default": 0,
+    "linebreak-style": 0,
     "import/no-unresolved": "off",
     "react/jsx-filename-extension": [
       1,
@@ -23,8 +23,7 @@
         "trailingComma": "es5",
         "singleQuote": true,
         "printWidth": 100,
-        "semi": false,
-        "eol": "lf"
+        "semi": false
       }
     ]
   },

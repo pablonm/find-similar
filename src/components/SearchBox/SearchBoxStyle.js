@@ -1,16 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Search = styled.div`
   display: block;
   width: 100%;
-`;
+`
 
 export const Shadow = styled.span`
   display: flex;
   -webkit-box-shadow: 3px 3px 0px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 3px 3px 0px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 3px 3px 0px 2px rgba(0, 0, 0, 0.2);
-`;
+`
 
 export const Input = styled.input`
   width: 100%;
@@ -18,7 +18,7 @@ export const Input = styled.input`
   font-size: 20px;
   border: none;
   outline: none;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   padding-left: 20px;
   padding-right: 20px;
 
@@ -26,7 +26,7 @@ export const Input = styled.input`
     color: #e6e6e6;
     font-style: italic;
   }
-`;
+`
 
 export const Button = styled.button`
   background: #facc2e;
@@ -43,4 +43,4 @@ export const Button = styled.button`
   img {
     width: 25px;
   }
-`;
+`

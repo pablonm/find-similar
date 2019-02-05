@@ -1,8 +1,8 @@
-import { combineReducers } from "redux";
-import { reducer as finder } from "./reducers/finder";
+import { combineReducers } from 'redux'
+import { reducer as finder } from './reducers/finder'
 
 const rootReducer = combineReducers({
-  finder
-});
+  finder,
+})
 
-export default rootReducer;
+export default rootReducer
